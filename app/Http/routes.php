@@ -21,17 +21,15 @@ Route::get('/', function(){
 });
 
 
-
-
 Route::get('cats', function(){
-	return 'All cats';
+	$cats = Furbook\Cat::all();
+	return view('cats.index')->with('cats', $cats);
 });
 
 
 Route::get('cats/{id}', function($id){
 	return sprintf('Cats #%s', $id);
 }) -> where('id', '[0-9]+');
-
 
 
 Route::get('about', function(){
