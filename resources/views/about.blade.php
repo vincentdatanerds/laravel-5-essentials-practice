@@ -7,6 +7,6 @@
 
 
 @section('content')
-	<p>There are over {{ $number_of_cats }} cat on this site!</p>
+	<p>There are over {{ $total_number_of_cats }} cat on this site!</p>
 
 @stop

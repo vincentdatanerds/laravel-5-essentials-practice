@@ -27,17 +27,17 @@ Route::get('cats', function(){
 });
 
 
-Route::get('cats/{id}', function($id){
-	$cat = Furbook\Cat::find($id);
+Route::get('cats/{cat}', function(Furbook\Cat $cat){
+	// $cat = Furbook\Cat::find($id);
+
 	return view('cats.show') -> with('cat', $cat);
 });
-// 	return sprintf('Cats #%s', $id);
-// }) -> where('id', '[0-9]+');
+
 
 
 Route::get('about', function(){
 	//return 'Hi';
-	return view('about') -> with('number_of_cats', 9000);
+	return view('about') -> with('total_number_of_cats', 440);
 });
 
 
