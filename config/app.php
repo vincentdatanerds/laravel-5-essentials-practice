@@ -177,8 +177,7 @@ return [
     'aliases' => [
 
 
-
-        'App' => Illuminate\Support\\App::class,
+        'App' => Illuminate\Support\Facades\App::class,
         'Artisan' => Illuminate\Support\Facades\Artisan::class,
         'Auth' => Illuminate\Support\Facades\Auth::class,
         'Blade' => Illuminate\Support\Facades\Blade::class,
