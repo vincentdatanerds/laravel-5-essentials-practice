@@ -31,3 +31,10 @@ Route::get('cats', function(){
 Route::get('cats/{id}', function($id){
 	return sprintf('Cats #%s', $id);
 }) -> where('id', '[0-9]+');
+
+
+
+Route::get('about', function(){
+	//return 'Hi';
+	return view('about') -> with('number_of_cats', 9000);
+});
