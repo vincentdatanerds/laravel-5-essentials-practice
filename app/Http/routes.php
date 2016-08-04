@@ -36,3 +36,15 @@ Route::get('about', function(){
 	//return 'Hi';
 	return view('about') -> with('number_of_cats', 9000);
 });
+
+
+Route::get('cats/breeds/{name}', function(){
+	$breed = Furbook\Breed::with('cats')
+		->whereName($name)
+		->first();
+	return view('cats.index')
+		->with('breed', $breed)
+		->with('cats', $breed->cats);
+
+
+});
