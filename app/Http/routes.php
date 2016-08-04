@@ -28,8 +28,11 @@ Route::get('cats', function(){
 
 
 Route::get('cats/{id}', function($id){
-	return sprintf('Cats #%s', $id);
-}) -> where('id', '[0-9]+');
+	$cat = Furbook\Cat::find($id);
+	return view('cats.show') -> with('cat', $cat);
+});
+// 	return sprintf('Cats #%s', $id);
+// }) -> where('id', '[0-9]+');
 
 
 Route::get('about', function(){
