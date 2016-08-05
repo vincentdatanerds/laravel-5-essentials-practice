@@ -10,12 +10,8 @@ class CatFormComposer{
 		$this->breeds = $breeds;
 	}
 
-	public function composer(View $view){
+	public function compose(View $view){
 
-		$view->with('breeds', $this->breeds->lists('name', 'id');
+		$view->with('breeds', $this->breeds->lists('name', 'id'));
 	}
-
-
-
-
 }
