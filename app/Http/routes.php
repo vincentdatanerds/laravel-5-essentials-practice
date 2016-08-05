@@ -49,8 +49,8 @@ Route::get('cats/{cat}/edit', function(Furbook\Cat $cat){
 });
 
 
-Route::put('cats/{cat}', function(Furbook\Cat $cat){
-    $cat->update(Input::all());
+Route::post('cats/{cat}', function(Furbook\Cat $cat){
+    $cat->update(Input::except('updated_at'));
     return redirect('cats/'.$cat->id)
         ->withSuccess('Cat has been updated.');
 });
