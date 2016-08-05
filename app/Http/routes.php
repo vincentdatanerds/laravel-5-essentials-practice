@@ -49,3 +49,9 @@ Route::get('cats/{cat}/edit', function(Furbook\Cat $cat){
 });
 
 
+Route::put('cats/{cat}', function(Furbook\Cat $cat){
+    $cat->update(Input::all());
+    return redirect('cats/'.$cat->id)
+        ->withSuccess('Cat has been updated.');
+});
+
