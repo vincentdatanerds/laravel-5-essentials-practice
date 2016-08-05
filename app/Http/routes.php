@@ -49,7 +49,7 @@ Route::get('cats/{cat}/edit', function(Furbook\Cat $cat){
 });
 
 //note that using put like in the book is not allowed by laravel
-Route::post('cats/{cat}', function(Furbook\Cat $cat){
+Route::put('cats/{cat}', function(Furbook\Cat $cat){
     $cat->update(Input::except('updated_at'));
     return redirect('cats/'.$cat->id)
         ->withSuccess('Cat has been updated.');
