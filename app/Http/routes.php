@@ -30,3 +30,12 @@ Route::post('cats', function(){
 });
 
 
+Route::get('cats/{cat}', function(Furbook\Cat $cat)
+{
+    return view('cats.show')->with('cat', $cat);
+
+})->where('id', '[0-9]+');
+
+
+
+
