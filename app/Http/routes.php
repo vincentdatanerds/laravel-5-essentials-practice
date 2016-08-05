@@ -56,3 +56,21 @@ Route::get('cats/breeds/{name}', function(){
 
 
 });
+
+
+
+Route::get('cats/create', function(){
+	// return view('cats.index');
+	return view('about') -> with('total_number_of_cats', 440);
+});
+
+
+
+Route::get('hello', function(){
+		return view('about') -> with('total_number_of_cats', 440);
+
+
+});
+
+
+
