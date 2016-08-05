@@ -43,4 +43,9 @@ Route::get('cats/{cat}', function(Furbook\Cat $cat)
 
 
 
+Route::get('cats/{cat}/edit', function(Furbook\Cat $cat){
+    return view('cats.edit')->with('cat', $cat);
+
+});
+
 
