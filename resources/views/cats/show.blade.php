@@ -7,7 +7,7 @@
 
 
 	</h2>
-	<a href = " {{ url('cats/' . $cats->id .'/edit') }}">
+	<a href = " {{ url('cats/' . $cat->id .'/edit') }}">
 		Edit
 
 	</a>
