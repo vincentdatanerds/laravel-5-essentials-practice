@@ -16,6 +16,13 @@ Route::get('cats', function(){
 	return view('cats.index')->with('cats', $cats);
 });
 
+Route::get('cats/{cat}', function(Furbook\Cat $cat)
+{
+    return view('cats.show')->with('cat', $cat);
+
+})->where('id', '[0-9]+');
+
+
 
 Route::group(['prefix' => 'cats'], function () {
    Route::get('create', function(){
