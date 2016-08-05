@@ -27,17 +27,16 @@ Route::get('cats', function(){
 });
 
 
-// Route::get('cats/{cat}', function(Furbook\Cat $cat){
-// 	// $cat = Furbook\Cat::find($id);
-
-// 	return view('cats.show') -> with('cat', $cat);
-// });
-
-
-Route::get('cats/{id}', function($id){
-	$cat = Furbook\Cat::find($id);
+Route::get('cats/{cat}', function(Furbook\Cat $cat){
+	// $cat = Furbook\Cat::find($id);
 	return view('cats.show') -> with('cat', $cat);
 });
+
+
+// Route::get('cats/{id}', function($id){
+// 	$cat = Furbook\Cat::find($id);
+// 	return view('cats.show') -> with('cat', $cat);
+// });
 
 
 
