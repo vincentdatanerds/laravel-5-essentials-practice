@@ -11,6 +11,11 @@
 |
 */
 
+Route::get('/', function()
+{
+    return redirect('cats');
+});
+
 Route::get('cats', function(){
 	$cats = Furbook\Cat::all();
 	return view('cats.index')->with('cats', $cats);
