@@ -55,6 +55,12 @@ Route::group(['prefix' => 'cats'], function () {
 
 });
 
+Route::post('cats', function(){
+    $cat = Furbook\Cat::create(Input::all());
+    return redirect('cats/'.$cat->id)
+        ->withSuccess('Cat has been created.');
+});
+
 // Route::get('cats/breeds/{name}', function(){
 // 	$breed = Furbook\Breed::with('cats')
 // 		->whereName($name)
