@@ -27,11 +27,12 @@ Route::get('cats', function(){
 });
 //
 //
-//Route::get('cats/{cat}', function(Furbook\Cat $cat){
-//	// $cat = Furbook\Cat::find($id);
-//	return view('cats.show') -> with('cat', $cat);
-//});
+Route::get('cats/{cat}', function(Furbook\Cat $cat){
+	// $cat = Furbook\Cat::find($id);
+	return view('cats.show') -> with('cat', $cat);
+});
 
+//Route::put('cats/{cat}')
 
 // Route::get('cats/{id}', function($id){
 // 	$cat = Furbook\Cat::find($id);
@@ -55,11 +56,14 @@ Route::group(['prefix' => 'cats'], function () {
 
 });
 
-Route::post('cats', function(){
-    $cat = Furbook\Cat::create(Input::except('updated_at'));
-    return redirect('cats/'.$cat->id)
-        ->withSuccess('Cat has been created.');
-});
+//Route::post('cats', function(){
+//    $cat = Furbook\Cat::create(Input::except('updated_at'));
+//    return redirect('cats/'.$cat->id)
+//        ->withSuccess('Cat has been created.');
+//});
+
+
+
 
 // Route::get('cats/breeds/{name}', function(){
 // 	$breed = Furbook\Breed::with('cats')

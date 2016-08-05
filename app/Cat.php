@@ -5,7 +5,7 @@ use Illuminate\Database\Eloquent\Model;
 class Cat extends Model {
 
     public $timestamps = false;
-    
+
 	protected $fillable = [
 		'name',
 		'date_of_birth',
