@@ -21,10 +21,10 @@
 //});
 //
 //
-//Route::get('cats', function(){
-//	$cats = Furbook\Cat::all();
-//	return view('cats.index')->with('cats', $cats);
-//});
+Route::get('cats', function(){
+	$cats = Furbook\Cat::all();
+	return view('cats.index')->with('cats', $cats);
+});
 //
 //
 //Route::get('cats/{cat}', function(Furbook\Cat $cat){
@@ -50,7 +50,7 @@
 Route::group(['prefix' => 'cats'], function () {
 
    Route::get('create', function(){
- 	 return view('cats.index');
+ 	 return view('cats.create');
    });
 
 });
