@@ -56,11 +56,11 @@ Route::group(['prefix' => 'cats'], function () {
 
 });
 
-//Route::post('cats', function(){
-//    $cat = Furbook\Cat::create(Input::except('updated_at'));
-//    return redirect('cats/'.$cat->id)
-//        ->withSuccess('Cat has been created.');
-//});
+Route::post('cats', function(){
+    $cat = Furbook\Cat::create(Input::except('updated_at'));
+    return redirect('cats/'.$cat->id)
+        ->withSuccess('Cat has been created.');
+});
 
 
 
